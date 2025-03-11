@@ -3,16 +3,20 @@ import java.util.Scanner;
 public class TwoDArrays {
     
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); // Scanner initialized
+        Scanner sc = new Scanner(System.in);
 
-        int rows = 3, col = 4; // Fixed matrix size
-        int[][] num = new int[rows][col];
+        System.out.println("Enter number of rows:");
+        int rows = sc.nextInt();
+        System.out.println("Enter number of columns:");
+        int col = sc.nextInt();
+
+        int num[][] = new int[rows][col];
 
         // Input
         System.out.println("Enter the elements of the matrix:");
-        for (int i = 0; i < rows; i++) {  // Fixed index range
+        for (int i = 0; i < rows; i++) {
             for (int j = 0; j < col; j++) {
-                num[i][j] = sc.nextInt(); // Read user input
+                num[i][j] = sc.nextInt();
             }
         }
 
@@ -25,6 +29,6 @@ public class TwoDArrays {
             System.out.println();
         }
 
-        sc.close(); // Close scanner at the end
+        sc.close(); // Close scanner at the end to prevent memory leaks
     }
 }
