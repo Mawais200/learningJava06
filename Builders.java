@@ -13,6 +13,21 @@ public class Builders {
         //append
         sb.append("Nasir");
         System.out.println(sb);
+        //Reverse
+        System.out.println(sb.reverse());
+        //make a logic to reverse a string
+        for(int i=0; i<sb.length()-1-i;i++){
+            int start = i;
+            int end = sb.length()-1-i;
+            char frontchar =sb.charAt(start);
+            char backchar=sb.charAt(end);
+            sb.setCharAt(frontchar, backchar);
+            sb.setCharAt(backchar, frontchar);
+
+
+        }
+        System.out.println(sb);
+
 
 
         
